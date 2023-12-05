@@ -29,7 +29,7 @@ public class CoachValidator extends Validator {
 
     private void validateSize(List<String> coaches) {
         if (coaches.size() < MIN_NUMBER || MAX_NUMBER < coaches.size()) {
-            throw ErrorMessage.INVALID_MENU_NUMBER.makeException();
+            throw ErrorMessage.INVALID_COACH_NUMBER.makeException();
         }
     }
 }
