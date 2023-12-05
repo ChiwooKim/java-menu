@@ -16,7 +16,7 @@ public class CoachValidator extends Validator {
     public void validate(String input) {
         List<String> coaches = Arrays.asList(input.split(DELIMITER));
         validateName(coaches);
-        validateLength(coaches);
+        validateSize(coaches);
     }
 
     private void validateName(List<String> coaches) {
@@ -27,7 +27,7 @@ public class CoachValidator extends Validator {
         }
     }
 
-    private void validateLength(List<String> coaches) {
+    private void validateSize(List<String> coaches) {
         if (coaches.size() < MIN_NUMBER || MAX_NUMBER < coaches.size()) {
             throw ErrorMessage.INVALID_MENU_NUMBER.makeException();
         }
