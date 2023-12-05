@@ -1,6 +1,10 @@
 package menu.domain;
 
+import java.util.Arrays;
+import java.util.Collection;
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public enum Menu {
     JAPANESE(1,
@@ -14,12 +18,20 @@ public enum Menu {
     WESTERN(5,
             List.of("라자냐", "그라탱", "뇨끼", "끼슈", "프렌치 토스트", "바게트", "스파게티", "피자", "파니니"));
 
+    private static final List<String> ALL_MENU = Stream.of(JAPANESE.categoryMenus, KOREAN.categoryMenus,
+                    CHINESE.categoryMenus, ASIAN.categoryMenus, WESTERN.categoryMenus)
+            .flatMap(Collection::stream)
+            .collect(Collectors.toUnmodifiableList());
     private final int categoryNumber;
     private final List<String> categoryMenus;
 
     Menu(int categoryNumber, List<String> categoryMenus) {
         this.categoryNumber = categoryNumber;
         this.categoryMenus = categoryMenus;
+    }
+
+    public static boolean isExistMenu(String menu) {
+        return ALL_MENU.contains(menu);
     }
 
     public int getCategoryNumber() {
