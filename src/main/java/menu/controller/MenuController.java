@@ -2,8 +2,8 @@ package menu.controller;
 
 import java.util.List;
 import menu.service.MenuService;
-import menu.domain.Coach;
-import menu.domain.Coaches;
+import menu.domain.coach.Coach;
+import menu.domain.coach.Coaches;
 import menu.view.InputView;
 import menu.view.OutputView;
 

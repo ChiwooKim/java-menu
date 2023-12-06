@@ -2,8 +2,8 @@ package menu.view;
 
 import static menu.view.ViewMessage.*;
 
-import menu.domain.Coach;
-import menu.domain.Coaches;
+import menu.domain.coach.Coach;
+import menu.domain.coach.Coaches;
 import menu.domain.Day;
 
 public class OutputView {

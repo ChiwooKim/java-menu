@@ -1,7 +1,7 @@
 package menu.service;
 
 import menu.domain.Category;
-import menu.domain.Coaches;
+import menu.domain.coach.Coaches;
 import menu.domain.Day;
 import menu.domain.Menu;
 

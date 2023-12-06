@@ -1,9 +1,10 @@
-package menu.domain;
+package menu.domain.coach;
 
 import camp.nextstep.edu.missionutils.Randoms;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import menu.domain.Menu;
 
 public class Coach {
 

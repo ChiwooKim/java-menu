@@ -1,8 +1,9 @@
-package menu.domain;
+package menu.domain.coach;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import menu.domain.Menu;
 
 public class Coaches {
 
