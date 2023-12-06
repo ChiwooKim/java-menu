@@ -28,9 +28,6 @@ public class InputView {
         while (true) {
             try {
                 String input = input();
-                if (input.isBlank()) {
-                    return List.of();
-                }
                 menuValidator.validate(input);
                 return Arrays.asList(input.split(DELIMITER));
             } catch (IllegalArgumentException e) {
